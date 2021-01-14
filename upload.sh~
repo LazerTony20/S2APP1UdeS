@@ -1,0 +1,6 @@
+git add -A
+echo Commit name:
+read commitname
+echo Commit description:
+read commitdescription
+git commit -m commitname commitdescription
