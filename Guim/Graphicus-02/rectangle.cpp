@@ -12,5 +12,15 @@ Rectangle::~Rectangle(){}
 double Rectangle::aire()
 {
 	return h*l;
-	
+}
+
+void Rectangle::setDimensions(int h, int l)
+{
+	hauteur = h;
+	largeur = l;
+}
+
+void Rectangle::afficher(ostream & s)
+{
+	cout << "hi" << endl;
 }

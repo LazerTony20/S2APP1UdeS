@@ -35,6 +35,8 @@ public:
    double aire();
    bool translater(int deltaX, int deltaY);
    void afficher(ostream & s);
+   
+   int getActif();
 
 private:
      Couche couches[MAX_COUCHES];

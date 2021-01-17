@@ -6,16 +6,16 @@
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
-#include "forme.h"
+//#include "forme.h"
 
-using namespace std;
 class Rectangle : Forme
 {
 	public:
 		Rectangle(int h = 1, int l = 1);
 		~Rectangle();
-		
-	protected:
+		double aire();
+		void afficher(ostream & s);
+		void setDimensions(int l, int h);
 		int hauteur;
 		int largeur;
-}
+};

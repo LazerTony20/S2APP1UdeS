@@ -12,6 +12,10 @@
 void Tests::tests_unitaires_formes()
 {
    // Tests sur les formes geometriques
+   Rectangle r;
+   cout << "TESTS Formes" << endl;
+   cout << r.hauteur << endl;
+   cout << r.largeur << endl;
 }
 
 void Tests::tests_unitaires_vecteur()
@@ -41,8 +45,9 @@ void Tests::tests_unitaires()
 void Tests::tests_application()
 {
    // Fait tous les tests applicatifs
-   tests_application_cas_01();
-   tests_application_cas_02();
+   //tests_application_cas_01();
+   //tests_application_cas_02();
+   tests_unitaires_formes();
 }
 
 void Tests::tests_application_cas_01()

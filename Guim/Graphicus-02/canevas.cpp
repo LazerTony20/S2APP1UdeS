@@ -20,34 +20,40 @@ bool Canevas::reinitialiser()
 {
 	for(int i;i<MAX_COUCHES;i++)
    {
-      delete couches[i];
-      couches[i] = new Couche();
+      delete &couches[i];
+      couches[i] = Couche(INITIALISE);
    }
    return true;
 }
 
 bool Canevas::activerCouche(int index)
 {
+	couches[index].etat = ACTIF;
    return true;
 }
 
 bool Canevas::cacherCouche(int index)
 {
+	couches[index].etat = CACHE;
    return true;
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
+	int couche_active = getActif();
    return true;
 }
 
 bool Canevas::retirerForme(int index)
 {
+	int couche_active = getActif();
    return true;
 }
 
 double Canevas::aire()
 {
+	int couche_active = getActif();
+	//couches[couche_active];
    return 0.0;
 }
 
@@ -58,4 +64,17 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::afficher(ostream & s)
 {
+	
+}
+
+int Canevas::getActif()
+{
+	for(int i;i<MAX_COUCHES;i++)
+   {
+      if(couches[i].etat == ACTIF)
+      {
+      	return i;
+      }
+   }
+   return 255;
 }
