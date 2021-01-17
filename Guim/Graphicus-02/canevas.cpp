@@ -18,6 +18,11 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
+	for(int i;i<MAX_COUCHES;i++)
+   {
+      delete couches[i];
+      couches[i] = new Couche();
+   }
    return true;
 }
 

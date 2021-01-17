@@ -9,8 +9,13 @@
 #include "forme.h"
 
 using namespace std;
-class rectangle : Forme
+class Rectangle : Forme
 {
-	rectangle();
-	~rectangle();
+	public:
+		Rectangle(int h = 1, int l = 1);
+		~Rectangle();
+		
+	protected:
+		int hauteur;
+		int largeur;
 }
