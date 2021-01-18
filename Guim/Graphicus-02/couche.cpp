@@ -12,3 +12,7 @@ Couche::Couche(int _etat_init)
 {
 	etat = _etat_init;
 }
+Couche::~Couche()
+{
+	
+}

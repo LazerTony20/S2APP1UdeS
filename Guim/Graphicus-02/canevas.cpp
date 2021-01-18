@@ -18,7 +18,7 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-	for(int i;i<MAX_COUCHES;i++)
+	for(int i=0;i<MAX_COUCHES;i++)
    {
       delete &couches[i];
       couches[i] = Couche(INITIALISE);

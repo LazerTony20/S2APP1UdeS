@@ -11,11 +11,15 @@
 
 void Tests::tests_unitaires_formes()
 {
-   // Tests sur les formes geometriques
    Rectangle r;
+   Carre c;
+   Cercle ce;
+   r.setDimensions(8,3);
+   c.setDimensions(6);
+   ce.setDimensions(4);
    cout << "TESTS Formes" << endl;
-   cout << r.hauteur << endl;
-   cout << r.largeur << endl;
+   r.afficher(cout);
+   c.afficher(cout);
 }
 
 void Tests::tests_unitaires_vecteur()

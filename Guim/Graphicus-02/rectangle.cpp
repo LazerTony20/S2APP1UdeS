@@ -7,7 +7,8 @@ Rectangle::Rectangle(int h, int l)
 	largeur = l;
 }
 
-Rectangle::~Rectangle(){
+Rectangle::~Rectangle()
+{
 	//i am inevitable
 }
 
@@ -22,7 +23,17 @@ void Rectangle::setDimensions(int h, int l)
 	largeur = l;
 }
 
+int Rectangle::Rectangle::getHauteur()
+{
+	return hauteur;
+}
+
+int Rectangle::Rectangle::getLargeur()
+{
+	return largeur;
+}
+
 void Rectangle::afficher(ostream & s)
 {
-	cout << "hi, i am rectangle, how are you" << endl;
+	cout << "Rectangle(x= " << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
 }
