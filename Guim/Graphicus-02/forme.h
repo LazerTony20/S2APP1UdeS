@@ -29,8 +29,4 @@ class Forme
 		Coordonnee ancrage;
 };
 
-#include "rectangle.h"
-#include "carre.h"
-#include "cercle.h"
-
 #endif

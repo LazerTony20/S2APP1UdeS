@@ -11,7 +11,7 @@ Rectangle::~Rectangle(){}
 
 double Rectangle::aire()
 {
-	return h*l;
+	return hauteur*largeur;
 }
 
 void Rectangle::setDimensions(int h, int l)

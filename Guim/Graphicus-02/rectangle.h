@@ -6,7 +6,7 @@
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
-//#include "forme.h"
+#include "forme.h"
 
 class Rectangle : Forme
 {

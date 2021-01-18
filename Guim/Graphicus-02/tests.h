@@ -9,6 +9,9 @@
 
 #include <iostream>
 #include "canevas.h"
+#include "rectangle.h"
+#include "carre.h"
+#include "cercle.h"
 
 using namespace std;
 
