@@ -34,3 +34,5 @@ void Forme::setAncrage(Coordonnee c)
 {
    ancrage = c;
 }
+
+
