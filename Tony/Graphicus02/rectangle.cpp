@@ -2,8 +2,8 @@
  * Fichier: rectangle.cpp
  * Auteurs: Guillaume Beaudoin et Anthony Royer
  * Date: 18 janvier 2021 (creation)
- * Description: 
- *    
+ * Description:Implementation des methodes des classes decrites dans
+ *    rectangle.h 
  *    
 ********/
 
@@ -48,7 +48,7 @@ void Rectangle::setDimensions(int newLargeur, int newHauteur)
 }
 
 //Fonction d'affichage.
-void Rectangle::afficher()
+void Rectangle::afficher(ostream & s)
 {
 	cout << "Rectangle(x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
 }

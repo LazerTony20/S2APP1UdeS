@@ -24,5 +24,9 @@ public:
 	int getCote();
 	void setCote(int newCote);
 	void afficher(ostream & s);
+private:
+	//Variables
+	int cote;
 };
 
+#endif

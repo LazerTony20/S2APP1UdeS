@@ -41,7 +41,7 @@ void Carre::setCote(int newCote)
 }
 
 //Fonction d'affichage.
-void Rectangle::afficher()
+void Carre::afficher(ostream & s)
 {
 	cout << "Carre (x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << cote << ", aire=" << aire() << ")" << endl;
 }
