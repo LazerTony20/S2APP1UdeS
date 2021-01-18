@@ -9,7 +9,6 @@
 
 #include "carre.h"
 
-
 //Code du constructeur.
 Carre::Carre(int coter)
 {
