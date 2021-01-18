@@ -10,13 +10,17 @@
 
 #include <iostream>
 #include "vecteur.h"
+#include "forme.h"
+#define DEFAULTCAPACITE 1
 
 class Vecteur
 {
 public:
-	Vecteur(int capVect = 5);
+	Vecteur(int capVect = DEFAULTCAPACITE);
 	~Vecteur();
-	bool addElement();
+	bool addElement(Forme* newElement);
+	bool augmenteCapacite(int newCapacite);
+	Forme* getPointeur(int indaxe);
 	int getTaille();	
 	int getCapacite();
 	bool purge();
@@ -24,6 +28,6 @@ private:
 	int taille = 0;
 	int capacite;
 	Forme** pointerVector; 
-}
+};
 
 #endif
