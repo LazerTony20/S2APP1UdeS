@@ -70,26 +70,16 @@ void Tests::tests_unitaires_couche()
 void Tests::tests_unitaires_canevas()
 {
    // Tests sur la classe Canevas
-   Canevas canvas (0);
-   canvas.ajouterForme(new Carre(4));
-   canvas.ajouterForme(new Rectangle());
-   canvas.ajouterForme(new Carre(2));
-   canvas.ajouterForme(new Cercle(5));
-   canvas.afficher(cout);
-   canvas.translater(5,5);
-   canvas.afficher(cout);
-   canvas.reinitialiser();
-   canvas.afficher(cout);
 }
 
 void Tests::tests_unitaires()
 {
    // Fait tous les tests unitaires
-   //tests_unitaires_formes();
+   tests_unitaires_formes();
 	cout << "===========================" << endl;
-   //tests_unitaires_vecteur();
+   tests_unitaires_vecteur();
 	cout << "===========================" << endl;
-   //tests_unitaires_couche();
+   tests_unitaires_couche();
    cout << "===========================" << endl;
    tests_unitaires_canevas();
 }
@@ -110,6 +100,31 @@ void Tests::tests_application_cas_01()
 {
    cout << "TESTS APPLICATION (CAS 01)" << endl; 
    // Il faut ajouter les operations realisant ce scenario de test.
+   Canevas canvas (0);
+   canvas.ajouterForme(new Carre(4));
+   canvas.ajouterForme(new Rectangle());
+   canvas.ajouterForme(new Carre(2));
+   canvas.ajouterForme(new Cercle(5));
+   cout << "Init formes" << endl;
+   canvas.afficher(cout);
+   cout << "Translation" << endl;
+   canvas.translater(5,5);
+   cout << "Retirer forme #3" << endl;
+   canvas.retirerForme(3);
+   cout << "Aire: " << canvas.aire() << endl;
+   canvas.afficher(cout);
+   cout << "Réinitialisation" << endl;
+   canvas.reinitialiser();
+   canvas.afficher(cout);
+   canvas.activerCouche(3);
+   cout << "Activer couche: 3" << endl;
+   canvas.ajouterForme(new Carre(7));
+   cout << "Init forme" << endl;
+   cout << "Cacher couche: 3" << endl;
+   canvas.cacherCouche(3);
+   canvas.activerCouche(1);
+   cout << "Activer couche: 1" << endl;
+   canvas.afficher(cout);
 }
 
 void Tests::tests_application_cas_02()

@@ -55,7 +55,7 @@ bool Vecteur::delElement(int index)
 			pointerVector[i] = pointerVector[i+1];
 		}
 		taille --;
-		delete pointerVector[taille];
+		pointerVector[taille] = NULL;
 		return true;
 	}
 }
@@ -109,7 +109,7 @@ bool Vecteur::purge()
 	//tous les crimes sont autorisé pour les 24 prochaines heures...
 	for(int i=0;i < capacite;i++)
 		{
-			delete pointerVector[i];
+			pointerVector[i] = NULL;
 		}
 	capacite = DEFAULTCAPACITE;
 	taille = 0;
