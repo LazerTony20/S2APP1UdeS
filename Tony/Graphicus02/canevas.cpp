@@ -8,8 +8,9 @@
 
 #include "canevas.h"
 
-Canevas::Canevas()
+Canevas::Canevas(int startLayer)
 {
+	couches[startLayer].etat = ETATACTIF;
 }
 
 Canevas::~Canevas()
@@ -18,27 +19,44 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-   return true;
+   
+	activeLayer = STARTINGLAYER;
+	return true;
 }
 
 bool Canevas::activerCouche(int index)
 {
-   return true;
+	if(activeLayer != NOACTIVELAYERS)
+	{
+		couches[activeLayer].etat = ETATINACTIF;
+	}
+	couches[index].etat = ETATACTIF;
+	activeLayer = index;
+	return true;
 }
 
 bool Canevas::cacherCouche(int index)
 {
-   return true;
+   if(activeLayer == index)
+   {
+   	activeLayer = NOACTIVELAYERS;
+   }
+	couches[index].etat = ETATCACHE;
+	return true;
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   return true;
+   if(activeLayer == NOACTIVELAYERS){return false;}
+	couches[activeLayer].VecteurFormesCouche.addElement(p_forme);
+	return true;
 }
 
 bool Canevas::retirerForme(int index)
 {
-   return true;
+   if(activeLayer == NOACTIVELAYERS){return false;}
+	couches[activeLayer].VecteurFormesCouche.delElement(index);
+	return true;
 }
 
 double Canevas::aire()
@@ -54,3 +72,5 @@ bool Canevas::translater(int deltaX, int deltaY)
 void Canevas::afficher(ostream & s)
 {
 }
+
+

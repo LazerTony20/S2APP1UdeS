@@ -14,6 +14,8 @@
 #include "forme.h"
 #include "couche.h"
 
+#define STARTINGLAYER 0
+#define NOACTIVELAYERS -1
 const int MAX_COUCHES = 5;
 
 using namespace std;
@@ -21,7 +23,7 @@ using namespace std;
 class Canevas
 {
 public:
-   Canevas();
+   Canevas(int startLayer = STARTINGLAYER);
    ~Canevas();
    
    bool reinitialiser();
@@ -38,6 +40,7 @@ public:
 
 private:
      Couche couches[MAX_COUCHES];
+     int activeLayer;
 };
 
 #endif

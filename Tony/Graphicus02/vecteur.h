@@ -19,6 +19,7 @@ public:
 	Vecteur(int capVect = DEFAULTCAPACITE);
 	~Vecteur();
 	bool addElement(Forme* newElement);
+	bool delElement(int index);
 	bool augmenteCapacite(int newCapacite);
 	Forme* getPointeur(int indaxe);
 	int getTaille();	

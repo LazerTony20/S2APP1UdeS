@@ -42,6 +42,24 @@ bool Vecteur::addElement(Forme* newElement)
 	
 }
 
+//Méthode pour retirer des éléments
+bool Vecteur::delElement(int index)
+{
+	if(index >= capacite){
+		return false;
+	}else if(index >= taille){
+		return true;
+	}else{
+		for(int i = index; i < taille-1; i++)
+		{
+			pointerVector[i] = pointerVector[i+1];
+		}
+		taille --;
+		delete pointerVector[taille];
+		return true;
+	}
+}
+
 //méthode pour augmenter la taille d'un tableau
 bool Vecteur::augmenteCapacite(int newCapacite)
 {

@@ -19,6 +19,7 @@
 #define ETATACTIF 2
 #define ETATCACHE 3
 
+
 class Couche
 {
    // Classe a completer
