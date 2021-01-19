@@ -14,10 +14,21 @@
 #include "forme.h"
 #include "vecteur.h"
 
+#define ETATINITIAL 0
+#define ETATINACTIF 1
+#define ETATACTIF 2
+#define ETATCACHE 3
 
 class Couche
 {
    // Classe a completer
+  public:
+  	Couche(int initialState = ETATINITIAL);
+  	~Couche();
+  	
+  	//Variables
+  	int etat;
+  	Vecteur VecteurFormesCouche;
 };
 
 #endif

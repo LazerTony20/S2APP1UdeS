@@ -8,4 +8,17 @@
 
 #include "couche.h"
 
-// Implementation a faire...
+//Constructeur
+Couche::Couche(int initialState)
+{
+	etat = initialState;
+}
+
+//Destructeur
+Couche::~Couche()
+{
+	
+}
+
+
+
