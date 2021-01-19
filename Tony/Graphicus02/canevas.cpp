@@ -21,6 +21,10 @@ bool Canevas::reinitialiser()
 {
    
 	activeLayer = STARTINGLAYER;
+	for(int i=0;i<MAX_COUCHES;i++)
+	{
+		couches[i].VecteurFormesCouche.purge();
+	}
 	return true;
 }
 

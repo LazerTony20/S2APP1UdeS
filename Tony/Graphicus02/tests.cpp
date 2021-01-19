@@ -59,15 +59,32 @@ void Tests::tests_unitaires_couche()
    cout << "__" << endl;
    couche_test.VecteurFormesCouche.addElement(new Cercle(9));
    cout << "__" << endl;
+   couche_test.VecteurFormesCouche.addElement(new Carre(4));
+   cout << "__" << endl;
+   couche_test.VecteurFormesCouche.addElement(new Cercle(80));
+   cout << "__" << endl;
    cout << couche_test.VecteurFormesCouche.getTaille() << endl;
    couche_test.VecteurFormesCouche.getPointeur(0)->afficher(cout);
    couche_test.VecteurFormesCouche.getPointeur(1)->afficher(cout);
+   couche_test.VecteurFormesCouche.getPointeur(2)->afficher(cout);
+   couche_test.VecteurFormesCouche.getPointeur(3)->afficher(cout);
    cout << couche_test.etat << endl;
 }
 
 void Tests::tests_unitaires_canevas()
 {
    // Tests sur la classe Canevas
+   Canevas canvas;
+   
+   canvas.ajouterForme(new Carre(4));
+   
+   canvas.ajouterForme(new Rectangle());
+   canvas.ajouterForme(new Carre(2));
+   canvas.ajouterForme(new Cercle(5));
+   cout << "__" << endl;
+   canvas.afficher(cout);
+   canvas.translater(5,5);
+   canvas.afficher(cout);
 }
 
 void Tests::tests_unitaires()
@@ -77,7 +94,7 @@ void Tests::tests_unitaires()
 	cout << "===========================" << endl;
    //tests_unitaires_vecteur();
 	cout << "===========================" << endl;
-   tests_unitaires_couche();
+   //tests_unitaires_couche();
    cout << "===========================" << endl;
    tests_unitaires_canevas();
 }

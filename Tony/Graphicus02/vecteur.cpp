@@ -76,7 +76,7 @@ bool Vecteur::augmenteCapacite(int newCapacite)
 		{
 			cout << "02 - " << i << endl;
 			tempVector[i] = pointerVector[i];
-			delete pointerVector[i];
+			//delete pointerVector[i];
 		}
 		capacite = newCapacite;
 		pointerVector = new Forme* [capacite];
