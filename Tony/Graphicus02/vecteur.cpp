@@ -30,8 +30,10 @@ bool Vecteur::addElement(Forme* newElement)
 	{
 		int capTemp = (capacite*2);
 		augmenteCapacite(capTemp);
+		
 		cout << capacite << endl;
 		cout << taille << endl;
+		
 		pointerVector[taille] = newElement;
 		taille ++;
 		return true;
@@ -51,7 +53,7 @@ bool Vecteur::delElement(int index)
 	if(index >= capacite){
 		return false;
 	}else if(index >= taille){
-		return true;
+		return false;
 	}else{
 		for(int i = index; i < taille-1; i++)
 		{
