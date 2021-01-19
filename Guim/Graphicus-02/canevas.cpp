@@ -111,6 +111,7 @@ void Canevas::afficher(ostream & s)
 					break;
 			}
 		}
+		//y and i are temporary. But DOOM is ETERNAL!!!
 	}
 }
 
