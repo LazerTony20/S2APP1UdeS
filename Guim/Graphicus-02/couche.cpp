@@ -14,5 +14,5 @@ Couche::Couche(int _etat_init)
 }
 Couche::~Couche()
 {
-	
+	delete &l_formes;
 }

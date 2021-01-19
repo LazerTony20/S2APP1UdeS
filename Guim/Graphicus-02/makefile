@@ -2,8 +2,8 @@
 #
 # CE MAKEFILE EST PARFAITEMENT FONCTIONNEL
 #
-graphicus-02: graphicus-02.o couche.o canevas.o forme.o tests.o rectangle.o carre.o cercle.o
-	g++ -o graphicus-02 graphicus-02.o couche.o canevas.o forme.o tests.o rectangle.o carre.o cercle.o
+graphicus-02: graphicus-02.o couche.o canevas.o forme.o tests.o rectangle.o carre.o cercle.o vector.o
+	g++ -o graphicus-02 graphicus-02.o couche.o canevas.o forme.o tests.o rectangle.o carre.o cercle.o vector.o
 
 graphicus-02.o: graphicus-02.cpp tests.cpp tests.h canevas.h
 	g++ graphicus-02.cpp tests.cpp -g -c
@@ -28,6 +28,9 @@ carre.o: carre.cpp carre.h rectangle.h forme.h
 	
 cercle.o: cercle.cpp cercle.h forme.h
 	g++ cercle.cpp -g -c
+	
+vector.o: vector.cpp vector.h forme.h
+	g++ vector.cpp -g -c
 #
 clean:
 	rm  -f *.o		

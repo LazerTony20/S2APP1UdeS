@@ -25,6 +25,7 @@ class Couche
    ~Couche();	//Destructeur.
    
    int etat;
+   Vecteur l_formes;
 };
 
 #endif

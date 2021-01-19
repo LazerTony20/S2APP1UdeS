@@ -12,6 +12,7 @@
 #include "rectangle.h"
 #include "carre.h"
 #include "cercle.h"
+#include "vector.h"
 
 using namespace std;
 

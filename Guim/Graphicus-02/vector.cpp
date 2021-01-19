@@ -40,7 +40,7 @@ bool Vecteur::add(Forme* f);
 
 Forme* Vecteur::get(int index);
 {
-	return listePforme
+	return listePforme[index];
 }
 
 bool Vecteur::purge();
@@ -63,3 +63,23 @@ int Vecteur::getCapacity();
 {
 	return capacite;
 }
+
+bool Vecteur::del(int index)
+{
+	if(index < taille)
+	{
+		delete listePforme[index];
+		for(int i=index;i<taille-1;i++)
+		{
+			listePforme[i] = listePforme[i+1];
+		}
+		taille--;
+		delete listePforme[taille];	//Élimine l'éccédent du tableau.
+		return true;
+	}else if(index >= taille && index < capacite)
+	{
+		return true;
+	}else
+	{return false;}
+}
+
