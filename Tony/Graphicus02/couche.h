@@ -11,6 +11,10 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
+#include "forme.h"
+#include "vecteur.h"
+
+
 class Couche
 {
    // Classe a completer

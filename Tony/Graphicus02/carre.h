@@ -20,7 +20,7 @@ public:
 	~Carre();
 	
 	//Méthodes
-	double aire() = 0;
+	double aire();
 	int getCote();
 	void setCote(int newCote);
 	void afficher(ostream & s);

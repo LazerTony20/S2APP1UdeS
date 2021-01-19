@@ -20,7 +20,7 @@ public:
 	~Rectangle();
 	
 	//Méthodes
-	double aire() = 0;
+	double aire();
 	int getLargeur();
 	int getHauteur();
 	void setDimensions(int newLargeur, int newHauteur);

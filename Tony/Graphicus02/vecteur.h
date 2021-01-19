@@ -9,7 +9,7 @@
 #define VECTEUR_H
 
 #include <iostream>
-#include "vecteur.h"
+
 #include "forme.h"
 #define DEFAULTCAPACITE 1
 

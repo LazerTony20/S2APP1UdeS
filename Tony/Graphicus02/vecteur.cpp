@@ -25,14 +25,16 @@ Vecteur::~Vecteur()
 //méthode d'ajout d'un élément
 bool Vecteur::addElement(Forme* newElement)
 {
-	taille ++;
-	if(taille > capacite)
+	
+	if(taille >= capacite)
 	{
 		augmenteCapacite(capacite*2);
-		pointerVector[taille] = newElement;		
+		pointerVector[taille] = newElement;
+		taille ++;
 		return true;
-	}else if(taille <= capacite){
+	}else if(taille < capacite){
 		pointerVector[taille] = newElement;	
+		taille ++;
 		return true;
 	}else{
 		return false;

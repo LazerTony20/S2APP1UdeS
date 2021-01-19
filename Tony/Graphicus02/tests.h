@@ -7,8 +7,14 @@
  *    fait partie de la distribution de Graphicus.
 ********/
 
+#ifndef TESTS_H
+#define TESTS_H
+
 #include <iostream>
 #include "canevas.h"
+#include "rectangle.h"
+#include "cercle.h"
+#include "carre.h"
 
 using namespace std;
 
@@ -27,3 +33,5 @@ public:
    void tests_application_cas_02();
    void tests_application(); // Appel de tous les tests applicatifs
 };
+
+#endif

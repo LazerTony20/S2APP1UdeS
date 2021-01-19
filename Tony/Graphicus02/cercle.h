@@ -20,7 +20,7 @@ public:
 	~Cercle();
 	
 	//Méthodes
-	double aire() = 0;
+	double aire();
 	int getRayon();
 	void setDimensions(int newRayon);
 	void afficher(ostream & s);
