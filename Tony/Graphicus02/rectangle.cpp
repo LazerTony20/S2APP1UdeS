@@ -50,5 +50,5 @@ void Rectangle::setDimensions(int newLargeur, int newHauteur)
 //Fonction d'affichage.
 void Rectangle::afficher(ostream & s)
 {
-	cout << "Rectangle(x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
+	s << "Rectangle(x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
 }

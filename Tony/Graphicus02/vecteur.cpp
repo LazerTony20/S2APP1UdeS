@@ -29,11 +29,7 @@ bool Vecteur::addElement(Forme* newElement)
 	if(taille >= capacite)
 	{
 		int capTemp = (capacite*2);
-		augmenteCapacite(capTemp);
-		
-		cout << capacite << endl;
-		cout << taille << endl;
-		
+		augmenteCapacite(capTemp);		
 		pointerVector[taille] = newElement;
 		taille ++;
 		return true;
@@ -44,7 +40,6 @@ bool Vecteur::addElement(Forme* newElement)
 	}else{
 		return false;
 	}
-	
 }
 
 //Méthode pour retirer des éléments
@@ -73,19 +68,15 @@ bool Vecteur::augmenteCapacite(int newCapacite)
 		return false;
 	}else{
 		Forme** tempVector = new Forme* [capacite];
-		cout << "Capacité à augmenter: " << newCapacite << endl;
 		for(int i=0;i < taille;i++)
 		{
-			cout << "02 - " << i << endl;
 			tempVector[i] = pointerVector[i];
 			//delete pointerVector[i];
 		}
 		capacite = newCapacite;
 		pointerVector = new Forme* [capacite];
-		cout << "Capacité augmentée: " << capacite << endl;
 		for(int i=0;i < taille;i++)
 		{
-			cout << "04 - " << i << endl;
 			pointerVector[i] = tempVector[i];
 		}
 		return true;

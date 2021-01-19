@@ -11,6 +11,7 @@
 Canevas::Canevas(int startLayer)
 {
 	couches[startLayer].etat = ETATACTIF;
+	activeLayer = startLayer;
 }
 
 Canevas::~Canevas()
@@ -76,6 +77,7 @@ double Canevas::aire()
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
+	cout << activeLayer << endl;
 	if(activeLayer == NOACTIVELAYERS){return false;}	//Gestion d'érreur.
 	for(int i;i<couches[activeLayer].VecteurFormesCouche.getTaille();i++)
    {
@@ -89,7 +91,7 @@ void Canevas::afficher(ostream & s)
 	if(activeLayer == NOACTIVELAYERS){}	//Gestion d'erreur.
 	else
 	{
-		for(int y;y<MAX_COUCHES;y++)
+		for(int y=0;y<MAX_COUCHES;y++)
 		{
 			cout << "----- Couche " << y << endl;
 			switch(couches[y].etat)
@@ -101,9 +103,9 @@ void Canevas::afficher(ostream & s)
 					cout << "Couche cachee" << endl;
 					break;
 				default:
-					for(int i;i<couches[y].VecteurFormesCouche.getTaille();i++)
+					for(int i=0;i<couches[y].VecteurFormesCouche.getTaille();i++)
 					{
-						couches[y].VecteurFormesCouche.getPointeur(i)->afficher(cout);
+						couches[y].VecteurFormesCouche.getPointeur(i)->afficher(s);
 					}
 					break;
 			}

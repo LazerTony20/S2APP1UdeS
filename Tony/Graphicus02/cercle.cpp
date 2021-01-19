@@ -41,7 +41,7 @@ void Cercle::setDimensions(int newRayon)
 //Code pour afficher
 void Cercle::afficher(ostream & s)
 {
-	cout << "Cercle (x=" << ancrage.x << ", y=" << ancrage.y << ", r=" << rayon << ", aire=" << aire() << ")" << endl;
+	s << "Cercle (x=" << ancrage.x << ", y=" << ancrage.y << ", r=" << rayon << ", aire=" << aire() << ")" << endl;
 }
 
 
