@@ -43,6 +43,9 @@ void Tests::tests_unitaires_vecteur()
 	Vecteur1.addElement(new Cercle());
 	Vecteur1.addElement(new Rectangle());
 	Vecteur1.addElement(new Cercle());
+	cout << "Taille:" << endl;
+	cout << Vecteur1.getTaille() << endl;
+	cout << "Adresses:" << endl;
 	for(int i=0;i < Vecteur1.getTaille();i++)
 	{
 		cout << Vecteur1.getPointeur(i) << endl;
@@ -53,6 +56,11 @@ void Tests::tests_unitaires_vecteur()
 void Tests::tests_unitaires_couche()
 {
    // Tests sur la classe Couche
+   Couche couche_test;
+   couche_test.VecteurFormesCouche.addElement(new Rectangle(3,8));
+   couche_test.VecteurFormesCouche.addElement(new Carre(8));
+   cout << couche_test.VecteurFormesCouche.getPointeur(0)->aire() << endl;
+   cout << couche_test.etat << endl;
 }
 
 void Tests::tests_unitaires_canevas()
@@ -68,6 +76,7 @@ void Tests::tests_unitaires()
    tests_unitaires_vecteur();
 	cout << "===========================" << endl;
    tests_unitaires_couche();
+   cout << "===========================" << endl;
    tests_unitaires_canevas();
 }
 
