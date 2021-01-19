@@ -55,13 +55,13 @@ void Tests::tests_unitaires_couche()
 {
    // Tests sur la classe Couche
    Couche couche_test;
-   cout << couche_test.etat << endl;
    couche_test.VecteurFormesCouche.addElement(new Rectangle(1,2));
-   cout << couche_test.etat << endl;
-   cout << couche_test.VecteurFormesCouche.getTaille() << endl;
+   cout << "__" << endl;
    couche_test.VecteurFormesCouche.addElement(new Cercle(9));
-   cout << couche_test.etat << endl;
+   cout << "__" << endl;
+   cout << couche_test.VecteurFormesCouche.getTaille() << endl;
    couche_test.VecteurFormesCouche.getPointeur(0)->afficher(cout);
+   couche_test.VecteurFormesCouche.getPointeur(1)->afficher(cout);
    cout << couche_test.etat << endl;
 }
 
