@@ -14,9 +14,9 @@ void Tests::tests_unitaires_formes()
 {
    // Tests sur les formes geometriques
 	//Test Rectangle
-	Rectangle Rectangle1;
+	Rectangle Rectangle1 (3,5);	//Test des paramètres du constructeur.
 	Rectangle1.afficher(cout);
-	Rectangle1.setDimensions(3,5);
+	//Rectangle1.setDimensions(3,5);
 	Rectangle1.translater(2,3);
 	Rectangle1.afficher(cout);
 	//Test Carre
@@ -31,7 +31,6 @@ void Tests::tests_unitaires_formes()
 	Cercle1.setDimensions(5);
 	Cercle1.translater(2,3);
 	Cercle1.afficher(cout);
-	
 }
 
 void Tests::tests_unitaires_vecteur()
@@ -50,16 +49,19 @@ void Tests::tests_unitaires_vecteur()
 	{
 		cout << Vecteur1.getPointeur(i) << endl;
 	}
-	
 }
 
 void Tests::tests_unitaires_couche()
 {
    // Tests sur la classe Couche
    Couche couche_test;
-   couche_test.VecteurFormesCouche.addElement(new Rectangle(3,8));
-   couche_test.VecteurFormesCouche.addElement(new Carre(8));
-   cout << couche_test.VecteurFormesCouche.getPointeur(0)->aire() << endl;
+   cout << couche_test.etat << endl;
+   couche_test.VecteurFormesCouche.addElement(new Rectangle(1,2));
+   cout << couche_test.etat << endl;
+   cout << couche_test.VecteurFormesCouche.getTaille() << endl;
+   couche_test.VecteurFormesCouche.addElement(new Cercle(9));
+   cout << couche_test.etat << endl;
+   couche_test.VecteurFormesCouche.getPointeur(0)->afficher(cout);
    cout << couche_test.etat << endl;
 }
 
@@ -71,9 +73,9 @@ void Tests::tests_unitaires_canevas()
 void Tests::tests_unitaires()
 {
    // Fait tous les tests unitaires
-   tests_unitaires_formes();
+   //tests_unitaires_formes();
 	cout << "===========================" << endl;
-   tests_unitaires_vecteur();
+   //tests_unitaires_vecteur();
 	cout << "===========================" << endl;
    tests_unitaires_couche();
    cout << "===========================" << endl;

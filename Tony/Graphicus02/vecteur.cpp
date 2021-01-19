@@ -28,12 +28,13 @@ bool Vecteur::addElement(Forme* newElement)
 	
 	if(taille >= capacite)
 	{
-		augmenteCapacite(capacite*2);
+		int capTemp = (capacite*2);
+		augmenteCapacite(capTemp);
 		pointerVector[taille] = newElement;
 		taille ++;
 		return true;
 	}else if(taille < capacite){
-		pointerVector[taille] = newElement;	
+		pointerVector[taille] = newElement;
 		taille ++;
 		return true;
 	}else{
