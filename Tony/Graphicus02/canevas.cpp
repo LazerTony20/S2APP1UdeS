@@ -20,8 +20,7 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-   
-	activeLayer = STARTINGLAYER;
+   	activeLayer = STARTINGLAYER;
 	for(int i=0;i<MAX_COUCHES;i++)
 	{
 		couches[i].VecteurFormesCouche.purge();
@@ -102,6 +101,10 @@ void Canevas::afficher(ostream & s)
 					cout << "Couche cachee" << endl;
 					break;
 				default:
+					if(couches[y].VecteurFormesCouche.getTaille() == 0)
+					{
+						cout << "Couche Vide" << endl;
+					}
 					for(int i=0;i<couches[y].VecteurFormesCouche.getTaille();i++)
 					{
 						couches[y].VecteurFormesCouche.getPointeur(i)->afficher(s);
