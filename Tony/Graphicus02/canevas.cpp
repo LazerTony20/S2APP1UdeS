@@ -67,7 +67,7 @@ double Canevas::aire()
 {
    double aire_totale = 0.0;
 	if(activeLayer == NOACTIVELAYERS){return -1.0;}	//Vibe Check xD.
-	for(int i;i<couches[activeLayer].VecteurFormesCouche.getTaille();i++)
+	for(int i=0;i<couches[activeLayer].VecteurFormesCouche.getTaille();i++)
    {
       aire_totale += couches[activeLayer].VecteurFormesCouche.getPointeur(i)->aire();
    }
@@ -78,7 +78,7 @@ bool Canevas::translater(int deltaX, int deltaY)
 {
 	cout << activeLayer << endl;
 	if(activeLayer == NOACTIVELAYERS){return false;}	//Gestion d'érreur.
-	for(int i;i<couches[activeLayer].VecteurFormesCouche.getTaille();i++)
+	for(int i=0;i<couches[activeLayer].VecteurFormesCouche.getTaille();i++)
    {
       couches[activeLayer].VecteurFormesCouche.getPointeur(i)->translater(deltaX,deltaY);
    }
@@ -102,6 +102,10 @@ void Canevas::afficher(ostream & s)
 					cout << "Couche cachee" << endl;
 					break;
 				default:
+					if(couches[y].VecteurFormesCouche.getTaille() == 0)
+					{
+						cout << "Couche Vide" << endl;
+					}
 					for(int i=0;i<couches[y].VecteurFormesCouche.getTaille();i++)
 					{
 						couches[y].VecteurFormesCouche.getPointeur(i)->afficher(s);
