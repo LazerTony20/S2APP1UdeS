@@ -1,0 +1,79 @@
+TESTS APPLICATION (CAS 01)
+Init formes
+----- Couche 0
+Carre (x=0, y=0, c=4, aire=16)
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+Carre (x=0, y=0, c=2, aire=4)
+Cercle (x=0, y=0, r=5, aire=78.54)
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Translation
+Retirer forme #3
+Aire: 21
+----- Couche 0
+Carre (x=5, y=5, c=4, aire=16)
+Rectangle(x=5, y=5, l=1, h=1, aire=1)
+Carre (x=5, y=5, c=2, aire=4)
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Réinitialisation
+----- Couche 0
+Couche Vide
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Activer couche: 3
+Init forme
+Cacher couche: 3
+Activer couche: 1
+----- Couche 0
+Couche Vide
+----- Couche 1
+Couche Vide
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche cachee
+----- Couche 4
+Couche initialisee
+===========================
+TESTS APPLICATION (CAS 02)
+===========================
+Rectangle(x=0, y=0, l=3, h=5, aire=15)
+Rectangle(x=2, y=3, l=3, h=5, aire=15)
+Carre (x=0, y=0, c=1, aire=1)
+Carre (x=2, y=3, c=5, aire=25)
+Cercle (x=0, y=0, r=1, aire=3.1416)
+Cercle (x=2, y=3, r=5, aire=78.54)
+===========================
+Taille:
+3
+Adresses:
+0x556a489c5130
+0x556a489c5150
+0x556a489c5170
+===========================
+4
+Rectangle(x=0, y=0, l=1, h=2, aire=2)
+Cercle (x=0, y=0, r=9, aire=254.47)
+Carre (x=0, y=0, c=4, aire=16)
+Cercle (x=0, y=0, r=80, aire=20106.2)
+0
+===========================
